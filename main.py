@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, send_from_directory
+from flask import Flask, render_template, request, send_from_directory, url_for
 from tensorflow.keras.models import load_model
 from keras.preprocessing.image import load_img, img_to_array
 import numpy as np
@@ -39,6 +39,9 @@ def predict_tumor(image_path):
 # Route for the main page (index.html)
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    skull = url_for('static', filename='skull.png')
+    skullshadow = url_for('static', filename='shadow.png')
+    
     if request.method == 'POST':
         # Handle file upload
         file = request.files['file']
@@ -51,9 +54,9 @@ def index():
             result, confidence = predict_tumor(file_location)
 
             # Return result along with image path for display
-            return render_template('index.html', result=result, confidence=f"{confidence*100:.2f}%", file_path=f'/uploads/{file.filename}')
+            return render_template('index.html', result=result, confidence=f"{confidence*100:.2f}%", file_path=f'/uploads/{file.filename}', skull = skull, skullshadow = skullshadow)
 
-    return render_template('index.html', result=None)
+    return render_template('index.html', result=None, skull = skull, skullshadow = skullshadow)
 
 # Route to serve uploaded files
 @app.route('/uploads/<filename>')
