@@ -23,6 +23,7 @@ The model was trained on a dataset containing over **1,300 MRI images**, categor
 ### Frontend:
 - **HTML/CSS**
 - **JavaScript**
+![Screenshot 2025-01-23 001453](https://github.com/user-attachments/assets/83eae89c-48f9-421e-83d8-b853da63b006)
 
 ### Model:
 - **VGG16** pre-trained on ImageNet, fine-tuned for multi-class classification.
@@ -61,6 +62,9 @@ The model was trained on a dataset containing over **1,300 MRI images**, categor
 - Wait for the model to process the image and display the tumor classification along with confidence scores.
 
 ## Results
+![Screenshot 2025-01-23 001535](https://github.com/user-attachments/assets/e242cb07-5f29-4bb3-86f4-e1098a4529c2)
+![Screenshot 2025-01-23 001600](https://github.com/user-attachments/assets/c213f1a9-db23-4b24-b6dd-a9a612b2e9c3)
+
 ### Classification Report
 ```
               precision    recall  f1-score   support
