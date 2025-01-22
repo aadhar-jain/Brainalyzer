@@ -48,11 +48,13 @@ The model was trained on a dataset containing over **1,300 MRI images**, categor
    ```bash
    pip install -r requirements.txt
    ```
-3. Run the application:
+3. Put the trained model.h5 file in the models directory.
+4. Put the index.html file in the templates directory.
+5. Run the application:
    ```bash
    python app.py
    ```
-4. Open your browser and navigate to `http://localhost:5000`.
+6. Open your browser and navigate to `http://localhost:5000`.
 
 ## Usage
 - Upload an MRI scan image using the web interface.
