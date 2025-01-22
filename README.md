@@ -3,6 +3,10 @@
 ## Overview
 This project is a **full-stack web application** designed to classify brain tumors from MRI scan images. It utilizes a deep learning model based on **VGG16** with transfer learning and provides predictions with confidence scores through an intuitive user interface. The application is capable of identifying four classes of brain tumors: **meningiomas**, **gliomas**, **pituitary tumors**, and **no tumor**.
 
+## Demo Video
+[Brainalyzer](https://www.youtube.com/watch?v=6oDoeOF2FF0)
+
+
 ## Features
 - Upload MRI scan images via a user-friendly web interface.
 - Process images using a pre-trained **VGG16 model** fine-tuned for this classification task.
